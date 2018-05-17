@@ -62,7 +62,7 @@ syn match elmNumber "\(\<\d\+\>\)"
 syn match elmNumber "\(\<\d\+\.\d\+\>\)"
 
 " Types
-syn match elmType "\<[A-Z][0-9A-Za-z_'-]*"
+syn match elmType "\<[A-Z\u00C0-\u017F][0-9A-Za-z_'-\u00F0-\u02AF]*"
 
 let b:current_syntax = "elm"
 
@@ -75,3 +75,5 @@ hi def link elmComment            Comment
 hi def link elmString             String
 hi def link elmNumber             Number
 hi def link specialName           Special
+
+set et
